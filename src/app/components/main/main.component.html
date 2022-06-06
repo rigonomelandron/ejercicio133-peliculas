@@ -1,0 +1,37 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="lateral.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Nombre aplicación</span>
+    <span class="espaciado"></span>
+    <!--Botones en la barra-->
+    <button mat-icon-button>
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button>
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
+
+<mat-drawer-container class="contenedor">
+    <!--Panel lateral-->
+    <mat-drawer #lateral mode="over"
+        class="barra-lateral shadow">
+
+      <mat-list role="list">
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="">Home</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="pelis">Películas</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="series">Series</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="actores">Actores</a></mat-list-item>
+
+      </mat-list>
+
+
+    </mat-drawer>
+
+    <!-- Contenido -->
+    <div class="barra-lateral-contenido">
+        <p>Contenido principal de la app</p>
+    </div>
+
+</mat-drawer-container>
