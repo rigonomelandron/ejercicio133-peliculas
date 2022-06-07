@@ -17,7 +17,7 @@ export class PeliculasServicesService {
 
   }
 
-  public getPeliculas(titulo:string, year:string):Observable<Pelicula>{
+  public getPeliculas(titulo:string, year?:string):Observable<Pelicula>{
 
     let url = this.REST_API_URL + "?t=" + titulo + "&y=" + year + "&apikey=" + this.key;
     return this._http.get<Pelicula>(url);

@@ -20,18 +20,15 @@
 
       <mat-list role="list">
         <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="">Home</a></mat-list-item>
-        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="pelis">Películas</a></mat-list-item>
-        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="series">Series</a></mat-list-item>
-        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="actores">Actores</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="/pelis">Películas</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="/series">Series</a></mat-list-item>
+        <mat-list-item role="listitem"><a class="nav-link" routerLinkActive="active" routerLink="/actores">Actores</a></mat-list-item>
 
       </mat-list>
 
 
     </mat-drawer>
 
-    <!-- Contenido -->
-    <div class="barra-lateral-contenido">
-        <p>Contenido principal de la app</p>
-    </div>
+    <router-outlet></router-outlet>
 
 </mat-drawer-container>

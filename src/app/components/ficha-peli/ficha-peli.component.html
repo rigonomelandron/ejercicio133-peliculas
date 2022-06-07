@@ -1,0 +1,62 @@
+<div *ngIf="pelicula" class="container">
+  <div class="row">
+    <div class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle>{{ this.pelicula?.Genre }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="pelicula?.Poster" alt="Poster" />
+        <mat-card-content>
+          <h2>Escritores</h2>
+          <p>
+            {{ this.pelicula?.Writer }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions class="text-center">
+          <button mat-button>
+            <mat-icon class="material-icons-outlined"> thumb_up </mat-icon>
+          </button>
+          <button mat-button>
+            <mat-icon class="material-icons-outlined"> thumb_down </mat-icon>
+          </button>
+          <button mat-button><mat-icon>share</mat-icon></button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+    <div class="col">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{ this.pelicula.Title }}</mat-card-title>
+          <mat-card-subtitle>{{ this.pelicula?.Genre }}</mat-card-subtitle>
+          <mat-card-subtitle>{{ this.pelicula?.Rated }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="">
+            <h3 class="m-0">Director:</h3>
+            <p class="mx-3">{{ this.pelicula.Director }}.</p>
+          </div>
+          <div class="">
+            <h3 class="m-0">Reparto:</h3>
+            <p class="mx-3">{{ this.pelicula.Actors }}.</p>
+          </div>
+          <h3 class="m-0">Sinopsis:</h3>
+          <p class="mx-3">{{ this.pelicula.Plot }}</p>
+
+          <div>
+            <h2 class="m-0">Rating</h2>
+            <h3 class="m-0 d-inline">{{ this.pelicula.Ratings[1].Source }}:</h3>
+            <p class="mx-3 d-inline">{{ this.pelicula.Ratings[1].Value }}.</p>
+          </div>
+          <div>
+
+            <h3 class="m-0 d-inline">{{ this.pelicula.Ratings[2].Source }}:</h3>
+            <p class="mx-3 d-inline">{{ this.pelicula.Ratings[2].Value }}.</p>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
